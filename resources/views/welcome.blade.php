@@ -81,11 +81,11 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel
+                    S.O.L.I.D. Principles
                 </div>
 
                 <div class="links">
-                    <a href="https://laravel.com/docs">Documentation</a>
+                    <a href="/single-responsibility">(S)ingle Responsibility</a>
                     <a href="https://laracasts.com">Laracasts</a>
                     <a href="https://laravel-news.com">News</a>
                     <a href="https://nova.laravel.com">Nova</a>
