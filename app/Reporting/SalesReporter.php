@@ -3,28 +3,28 @@
 namespace App\Reporting;
 
 use Illuminate\Database\Eloquent\Model;
-use Auth;
-use DB;
-use Exception;
+use App\Repositories\SalesRepository;
 
 class SalesReporter extends Model
 {
+    private $repo;
+
+    public function __construct(SalesRepository $repo)
+    {
+        $this->repo = $repo;
+    }
+
     public function between($startDate, $endDate)
     {
         // get sales from db
-        $sales = $this->queryDBForSalesBetween($startDate, $endDate);
+        $sales = $this->repo->between($startDate, $endDate);
 
         // return
         return $this->format($sales);
     }
 
-    protected function queryDBForSalesBetween($startDate, $endDate)
-    {
-        return DB::table('sales')->whereBetween('created_at', [$startDate, $endDate])->sum('charge') / 100;
-    }
-
     protected function format($sales)
     {
-        return "<h1>Sales: $sales";
+        return "<h1>Sales: $" . number_format($sales, 2) . "</h1>";
     }
 }
