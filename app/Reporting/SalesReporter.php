@@ -14,17 +14,11 @@ class SalesReporter extends Model
         $this->repo = $repo;
     }
 
-    public function between($startDate, $endDate)
+    public function between($startDate, $endDate, SalesOutputInterface $formatter)
     {
         // get sales from db
         $sales = $this->repo->between($startDate, $endDate);
 
-        // return
-        return $this->format($sales);
-    }
-
-    protected function format($sales)
-    {
-        return "<h1>Sales: $" . number_format($sales, 2) . "</h1>";
+        return $formatter->output($sales);
     }
 }

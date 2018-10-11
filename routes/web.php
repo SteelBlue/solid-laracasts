@@ -16,12 +16,12 @@ Route::get('/', function () {
 });
 
 Route::get('/single-responsibility', function () {
-    $report = new App\Reporting\SalesReporter();
+    $report = new App\Reporting\SalesReporter(new App\Repositories\SalesRepository);
 
     $begin = Carbon\Carbon::now()->subDays(10);
     $end = Carbon\Carbon::now();
 
-    return $report->between($begin, $end);
+    return $report->between($begin, $end, new App\Reporting\HtmlOutput);
 });
 
 Auth::routes();
