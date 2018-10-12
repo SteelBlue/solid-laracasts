@@ -1,8 +1,6 @@
 <?php
 
-namespace App\Reporting;
-
-use App\Reporting\SalesOutputInterface;
+namespace App\Lessons\SingleResponsibility\Reporting;
 
 class HtmlOutput implements SalesOutputInterface
 {

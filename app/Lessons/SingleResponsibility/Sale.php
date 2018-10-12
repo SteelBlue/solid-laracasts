@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace App\Lessons\SingleResponsibility;
 
 use Illuminate\Database\Eloquent\Model;
 

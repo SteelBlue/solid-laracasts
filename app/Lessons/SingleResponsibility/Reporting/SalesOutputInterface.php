@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Reporting;
+namespace App\Lessons\SingleResponsibility\Reporting;
 
 interface SalesOutputInterface
 {

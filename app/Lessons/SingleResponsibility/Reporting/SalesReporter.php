@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Reporting;
+namespace App\Lessons\SingleResponsibility\Reporting;
 
 use Illuminate\Database\Eloquent\Model;
-use App\Repositories\SalesRepository;
+use App\Lessons\SingleResponsibility\Repositories\SalesRepository;
 
 class SalesReporter extends Model
 {

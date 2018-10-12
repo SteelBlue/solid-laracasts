@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Repositories;
+namespace App\Lessons\SingleResponsibility\Repositories;
 
 use DB;
 
