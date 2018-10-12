@@ -26,7 +26,7 @@ function foo(LessonRepositoryInterface $lesson)
         // do something with the DbLessonRepository collection.
     }
 
-    if ($lesson instanceof 'FileLessonRepository')
+    if ($lesson instanceof FileLessonRepository)
     {
         // do something with FileLessonRepository array.
     }
