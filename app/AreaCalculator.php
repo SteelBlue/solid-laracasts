@@ -8,14 +8,7 @@ class AreaCalculator
     {
         foreach($shapes as $shape)
         {
-            if (is_a($shape, 'Square'))
-            {
-                $area[] = $shape->width * $shape->height;
-            }
-            else
-            {
-                $area[] = $shape->radius * $shape->radius * pi();
-            }
+            $area[] = $shape->area();
         }
 
         return array_sum($area);
