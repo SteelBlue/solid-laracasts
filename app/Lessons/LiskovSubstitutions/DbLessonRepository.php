@@ -6,6 +6,7 @@ class DbLessonRepository implements LessonRepositoryInterface
 {
     public function getAll()
     {
-        return Lesson::all()->toArray();
+        return Lesson::all(); // violates the LSP
+//        return Lesson::all()->toArray(); // adheres to the LSP
     }
 }
