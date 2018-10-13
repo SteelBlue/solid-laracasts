@@ -6,14 +6,17 @@ namespace App\Lessons\InterfaceSegregation;
  * Imagine we are in the world of Star Trek.
  */
 
-interface WorkerInterface
+interface WorkableInterface
 {
     public function work();
+}
 
+interface SleepableInterface
+{
     public function sleep();
 }
 
-class HumanWorker implements WorkerInterface
+class HumanWorker implements WorkableInterface, SleepableInterface
 {
     public function work()
     {
@@ -26,17 +29,12 @@ class HumanWorker implements WorkerInterface
     }
 }
 
-class AndroidWorker implements WorkerInterface
+class AndroidWorker implements WorkableInterface
 {
 
     public function work()
     {
         return 'android working.';
-    }
-
-    public function sleep()
-    {
-        return null;
     }
 }
 
