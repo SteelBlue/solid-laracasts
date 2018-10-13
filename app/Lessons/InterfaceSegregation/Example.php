@@ -6,6 +6,11 @@ namespace App\Lessons\InterfaceSegregation;
  * Imagine we are in the world of Star Trek.
  */
 
+interface ManageableInterface
+{
+    public function beManaged();
+}
+
 interface WorkableInterface
 {
     public function work();
@@ -16,7 +21,7 @@ interface SleepableInterface
     public function sleep();
 }
 
-class HumanWorker implements WorkableInterface, SleepableInterface
+class HumanWorker implements WorkableInterface, SleepableInterface, ManageableInterface
 {
     public function work()
     {
@@ -27,6 +32,12 @@ class HumanWorker implements WorkableInterface, SleepableInterface
     {
         return 'human sleeping';
     }
+
+    public function beManaged()
+    {
+        $this->work();
+        $this->sleep();
+    }
 }
 
 class AndroidWorker implements WorkableInterface
@@ -36,13 +47,17 @@ class AndroidWorker implements WorkableInterface
     {
         return 'android working.';
     }
+
+    public function beManaged()
+    {
+        $this->work();
+    }
 }
 
 class Captain
 {
-    public function manage(WorkableInterface $worker)
+    public function manage(ManageableInterface $worker)
     {
-        $worker->work();
-        $worker->sleep();
+        $worker->beManaged();
     }
 }
