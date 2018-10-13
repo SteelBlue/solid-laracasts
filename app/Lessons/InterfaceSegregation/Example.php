@@ -40,7 +40,7 @@ class AndroidWorker implements WorkableInterface
 
 class Captain
 {
-    public function manage(Worker $worker)
+    public function manage(WorkableInterface $worker)
     {
         $worker->work();
         $worker->sleep();
