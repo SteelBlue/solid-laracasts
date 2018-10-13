@@ -17,12 +17,26 @@ class HumanWorker implements WorkerInterface
 {
     public function work()
     {
-        // TODO: Implement work() method.
+        return 'human working.';
     }
 
     public function sleep()
     {
-        // TODO: Implement sleep() method.
+        return 'human sleeping';
+    }
+}
+
+class AndroidWorker implements WorkerInterface
+{
+
+    public function work()
+    {
+        return 'android working.';
+    }
+
+    public function sleep()
+    {
+        return null;
     }
 }
 
