@@ -7,7 +7,7 @@
         <title>Laravel</title>
 
         <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Nunito:200,600,800" rel="stylesheet" type="text/css">
 
         <!-- Styles -->
         <style>
@@ -58,6 +58,11 @@
                 text-transform: uppercase;
             }
 
+            .links > a span {
+                font-size: 16px;
+                font-weight: 800;
+            }
+
             .m-b-md {
                 margin-bottom: 30px;
             }
@@ -80,17 +85,20 @@
             @endif
 
             <div class="content">
+                <div class="links m-b-sm">
+                    <a href="https://github.com/SteelBlue/solid-laracasts">GitHub</a>
+                </div>
+
                 <div class="title m-b-md">
                     S.O.L.I.D. Principles
                 </div>
 
                 <div class="links">
-                    <a href="/single-responsibility">(S)ingle Responsibility</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
+                    <a href="/single-responsibility"><span>(S)</span>ingle Responsibility</a>
+                    <a href="/"><span>(O)</span>pen/Closed</a>
+                    <a href="/"><span>(L)</span>iskov Substitution</a>
+                    <a href="/"><span>(I)</span>nterface Segregation</a>
+                    <a href="/"><span>(D)</span>ependency Inversion</a>
                 </div>
             </div>
         </div>
